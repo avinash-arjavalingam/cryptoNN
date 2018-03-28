@@ -1,4 +1,21 @@
 class position:
+	"""
+	N
+	E
+	U
+	R
+	A
+	L
+
+	N
+	E
+	T
+	W
+	O
+	R
+	K
+	S
+	"""
 	
 	def __init__(self):
 		self.holdings = {}
@@ -6,6 +23,15 @@ class position:
 		self.lastUpdated = {}
 
 	def buy(self, src, dst, amount):
+		"""
+		B
+		U
+		Y
+
+		L
+		O
+		W
+		"""
 		#src is currency used to buy dst currency
 		#Could change assert to if else (returning NoneType) if conditions not met
 		assert src in self.holdings, "No holdings in this source currency"
@@ -18,6 +44,17 @@ class position:
 		self.holdings[dst] += (1 / self.priceList[dst + ":" + src]) * amount
 
 	def sell(self, src, dst, amount):
+		"""
+		S
+		E
+		L
+		L
+
+		H
+		I
+		G
+		H
+		"""
 		#src currency being sold for dst currency
 		#eg. I sell 5 Eth (src) for USD (dst)
 		assert src in self.holdings, "No holdings in this source currency"
